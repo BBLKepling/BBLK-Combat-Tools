@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="Weapon_GrenadeFrag" or defName="Weapon_GrenadeMolotov" or defName="Pila"]/verbs/li/verbClass</xpath>
+    <value>
+      <verbClass>Verb_ShootOneUse</verbClass>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAddModExtension">
+    <xpath>Defs/ThingDef[defName="Weapon_GrenadeFrag"]</xpath>
+    <value>
+      <li Class="BBLKCombatTools.GenerateWithAmmo">
+        <generateAmmo>
+          <Weapon_GrenadeFrag>5~10</Weapon_GrenadeFrag>
+        </generateAmmo>
+      </li>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAddModExtension">
+    <xpath>Defs/ThingDef[defName="Weapon_GrenadeMolotov"]</xpath>
+    <value>
+      <li Class="BBLKCombatTools.GenerateWithAmmo">
+        <generateAmmo>
+          <Weapon_GrenadeMolotov>5~10</Weapon_GrenadeMolotov>
+        </generateAmmo>
+      </li>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAddModExtension">
+    <xpath>Defs/ThingDef[defName="Pila"]</xpath>
+    <value>
+      <li Class="BBLKCombatTools.GenerateWithAmmo">
+        <generateAmmo>
+          <Pila>5~10</Pila>
+        </generateAmmo>
+      </li>
+    </value>
+  </Operation>
+
+</Patch>

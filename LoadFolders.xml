@@ -1,0 +1,6 @@
+<loadFolders>
+  <v1.4>
+    <li>1.4</li>
+    <li IfModNotActive="petetimessix.simplesidearms">1.4/Mods/SS</li>
+  </v1.4>
+</loadFolders>

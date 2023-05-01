@@ -1,0 +1,4 @@
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\BBLK Combat Tools\1.4\Mods\SS\Assemblies\BBLKCombatToolsSS.dll
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\BBLK Combat Tools\Source_SS\BBLKCombatToolsSS\obj\Debug\BBLKCombatToolsSS.csproj.AssemblyReference.cache
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\BBLK Combat Tools\Source_SS\BBLKCombatToolsSS\obj\Debug\BBLKCombatToolsSS.csproj.CoreCompileInputs.cache
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\BBLK Combat Tools\Source_SS\BBLKCombatToolsSS\obj\Debug\BBLKCombatToolsSS.dll
