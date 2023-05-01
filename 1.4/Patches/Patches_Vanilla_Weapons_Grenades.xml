@@ -14,6 +14,7 @@
       <li Class="BBLKCombatTools.GenerateWithAmmo">
         <generateAmmo>
           <Weapon_GrenadeFrag>5~10</Weapon_GrenadeFrag>
+          <MeleeWeapon_Knife>1~1</MeleeWeapon_Knife>
         </generateAmmo>
       </li>
     </value>
@@ -24,7 +25,8 @@
     <value>
       <li Class="BBLKCombatTools.GenerateWithAmmo">
         <generateAmmo>
-          <Weapon_GrenadeMolotov>5~10</Weapon_GrenadeMolotov>
+          <Weapon_GrenadeMolotov>1~1</Weapon_GrenadeMolotov>
+          <MeleeWeapon_Knife>1~1</MeleeWeapon_Knife>
         </generateAmmo>
       </li>
     </value>

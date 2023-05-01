@@ -4,3 +4,4 @@ C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\BBLK Combat Tools\So
 C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\BBLK Combat Tools\Source\BBLKCombatTools\obj\Debug\BBLKCombatTools.csproj.CoreCompileInputs.cache
 C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\BBLK Combat Tools\Source\BBLKCombatTools\obj\Debug\BBLKCombatTools.dll
 C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\BBLK Combat Tools\Assemblies\BBLKCombatTools.dll
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\BBLK Combat Tools\1.4\Assemblies\BBLKCombatTools.dll

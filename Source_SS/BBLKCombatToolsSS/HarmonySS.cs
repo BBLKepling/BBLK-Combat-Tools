@@ -13,6 +13,7 @@ namespace BBLKCombatToolsSS
         {
             if (!(__instance.caster is Pawn)) { return; }
             Pawn pawn = __instance.caster as Pawn;
+            if (!pawn.equipment.GetDirectlyHeldThings().NullOrEmpty()) { return; }
             List<Thing> pawnInv = pawn.inventory?.innerContainer?.InnerListForReading;
             if (pawnInv.NullOrEmpty()) { return; }
             //pawnInv.Shuffle();
@@ -21,7 +22,7 @@ namespace BBLKCombatToolsSS
                 if (thing.def.IsRangedWeapon)
                 {
                     pawn.inventory.innerContainer.TryTransferToContainer(thing, pawn.equipment.GetDirectlyHeldThings(), 1, false);
-                    break;
+                    return;
                 }
             }
             foreach (Thing thing in pawnInv)
@@ -29,7 +30,7 @@ namespace BBLKCombatToolsSS
                 if (thing.def.IsWeapon)
                 {
                     pawn.inventory.innerContainer.TryTransferToContainer(thing, pawn.equipment.GetDirectlyHeldThings(), 1, false);
-                    break;
+                    return;
                 }
             }
         }
