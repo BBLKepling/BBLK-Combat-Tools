@@ -11,27 +11,24 @@ namespace BBLKCombatTools
         [HarmonyPostfix]
         public static void GenerateInventoryFor(Pawn p)
         {
-            if (p?.equipment != null)
+            if (p?.equipment?.Primary?.def is null || 
+                p.inventory?.innerContainer is null || 
+                !p.equipment.Primary.def.HasModExtension<GenerateWithAmmo>() || 
+                p.equipment.Primary.def.GetModExtension<GenerateWithAmmo>().generateAmmo.NullOrEmpty()
+                ) return;
+            foreach (ThingDefCountRangeClass item in p.equipment.Primary.def.GetModExtension<GenerateWithAmmo>().generateAmmo)
             {
-                foreach (ThingWithComps equip in p.equipment.AllEquipmentListForReading)
+                if (p.equipment.Primary.Stuff != null)
                 {
-                    if (!equip.def.HasModExtension<GenerateWithAmmo>()) { continue; }
-                    if (equip.def.GetModExtension<GenerateWithAmmo>().generateAmmo.NullOrEmpty()) { continue; }
-                    foreach (ThingDefCountRangeClass item in equip.def.GetModExtension<GenerateWithAmmo>().generateAmmo)
-                    {
-                        if (equip.Stuff != null)
-                        {
-                            Thing thing = ThingMaker.MakeThing(item.thingDef, GenStuff.AllowedStuffsFor(item.thingDef).Any() ? equip.Stuff : null);
-                            thing.stackCount = item.countRange.RandomInRange;
-                            p.inventory?.innerContainer.TryAdd(thing);
-                        }
-                        else
-                        {
-                            Thing thing = ThingMaker.MakeThing(item.thingDef, GenStuff.AllowedStuffsFor(item.thingDef).Any() ? GenStuff.AllowedStuffsFor(item.thingDef).RandomElement() : null);
-                            thing.stackCount = item.countRange.RandomInRange;
-                            p.inventory?.innerContainer.TryAdd(thing);
-                        }
-                    }
+                    Thing thing = ThingMaker.MakeThing(item.thingDef, GenStuff.AllowedStuffsFor(item.thingDef).Any() ? p.equipment.Primary.Stuff : null);
+                    thing.stackCount = item.countRange.RandomInRange;
+                    p.inventory.innerContainer.TryAdd(thing);
+                }
+                else
+                {
+                    Thing thing = ThingMaker.MakeThing(item.thingDef, GenStuff.AllowedStuffsFor(item.thingDef).Any() ? GenStuff.AllowedStuffsFor(item.thingDef).RandomElement() : null);
+                    thing.stackCount = item.countRange.RandomInRange;
+                    p.inventory.innerContainer.TryAdd(thing);
                 }
             }
         }

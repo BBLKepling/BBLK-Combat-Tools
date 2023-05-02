@@ -17,6 +17,7 @@ namespace BBLKCombatToolsSS
             List<Thing> pawnInv = pawn.inventory?.innerContainer?.InnerListForReading;
             if (pawnInv.NullOrEmpty()) { return; }
             //pawnInv.Shuffle();
+            //pawnInv.Reverse();
             foreach (Thing thing in pawnInv)
             {
                 if (thing.def.IsRangedWeapon)
