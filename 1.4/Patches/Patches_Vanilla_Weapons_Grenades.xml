@@ -58,6 +58,7 @@
           <Weapon_GrenadeFrag>5~10</Weapon_GrenadeFrag>
         </generateAmmo>
       </li>
+      <li MayRequire="LimeTreeSnake.Ammunition" Class="Ammunition.DefModExtensions.AmmunitionExtension" />
     </value>
   </Operation>
 
@@ -69,6 +70,7 @@
           <Weapon_GrenadeEMP>5~10</Weapon_GrenadeEMP>
         </generateAmmo>
       </li>
+      <li MayRequire="LimeTreeSnake.Ammunition" Class="Ammunition.DefModExtensions.AmmunitionExtension" />
     </value>
   </Operation>
 
@@ -80,6 +82,7 @@
           <Weapon_GrenadeMolotov>5~10</Weapon_GrenadeMolotov>
         </generateAmmo>
       </li>
+      <li MayRequire="LimeTreeSnake.Ammunition" Class="Ammunition.DefModExtensions.AmmunitionExtension" />
     </value>
   </Operation>
 

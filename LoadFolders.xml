@@ -1,6 +1,9 @@
 <loadFolders>
   <v1.4>
     <li>1.4</li>
+    <!-- Simple Sidearms Alternative Harmony Patch -->
     <li IfModNotActive="petetimessix.simplesidearms">1.4/Mods/SS</li>
+    <!-- LimeTreeSnake -->
+    <li IfModActive="LimeTreeSnake.Ammunition">1.4/Mods/LTS/LTS_Ammunition</li>
   </v1.4>
 </loadFolders>
